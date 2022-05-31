@@ -8,6 +8,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Run script file
+        run: |
+         chmod +x ./scripts/bash.sh
+         ./public/scripts/test.sh
+      shell: bash
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
