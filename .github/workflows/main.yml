@@ -9,9 +9,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run script file
-        run: |
-           sudo chmod +x  ${GITHUB_WORKSPACE}/scripts/bash.sh
-           ${GITHUB_WORKSPACE}/scripts/bash.sh
+        run:  sudo hostnamectl set-hostname myvaillantweb.localhost
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
