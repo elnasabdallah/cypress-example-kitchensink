@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Run script file
         run: |
-           chmod +x  ${GITHUB_WORKSPACE}/scripts/bash.sh
+           sudo chmod +x  ${GITHUB_WORKSPACE}/scripts/bash.sh
            ${GITHUB_WORKSPACE}/scripts/bash.sh
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
